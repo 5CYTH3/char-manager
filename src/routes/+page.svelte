@@ -35,8 +35,8 @@
 <button onclick={get_chars}>get_characters</button>
 <button>delete_default_char</button>
 
-{#if infos !== undefined}
-    <div class="cards-container">
+<div class="cards-wrapper">
+    {#if infos !== undefined}
         {#each infos as c}
             <CharCard
                 name={c.name}
@@ -45,12 +45,13 @@
                 _class={c.class}
             />
         {/each}
-    </div>
-{/if}
+    {/if}
+</div>
 
 <style>
-    .cards-container {
+    .cards-wrapper {
         height: 70vh;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;

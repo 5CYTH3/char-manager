@@ -45,7 +45,6 @@
         max-width: 100px;
         max-height: 100px;
         object-fit: cover;
-
         border-radius: 50px;
     }
 
@@ -55,7 +54,6 @@
         justify-content: center;
         align-items: center;
         color: black;
-
         text-decoration: none;
     }
 </style>

@@ -1,16 +1,20 @@
 <script lang="ts">
+    import { Undo2 } from "@lucide/svelte";
     import { goto } from "$app/navigation";
     import Button from "$lib/components/Button.svelte";
     import { type PageProps } from "./$types";
+    import Box from "$lib/components/Box.svelte";
 
     let { data }: PageProps = $props();
 </script>
 
 <section>
     <div id="lsidebar">
-        <Button _class="btn" action={() => goto("/", { replaceState: true })}
-            >Back to characters</Button
-        >
+        <Button action={() => goto("/", { replaceState: true })}>
+            <Undo2></Undo2>
+            Back to characters
+        </Button>
+        <Box width="100%" height="auto">dick</Box>
     </div>
     <div id="content"></div>
 </section>
@@ -19,6 +23,7 @@
     :global(body) {
         padding: 0;
         margin: 0;
+        font-size: 20px;
     }
 
     section {
@@ -31,15 +36,12 @@
 
     #lsidebar {
         display: flex;
-        justify-content: center;
-        align-items: start;
-        background-color: red;
+        align-items: center;
+        flex-direction: column;
+        background-color: #e4e4e4;
         height: 100%;
-        width: 200px;
-    }
-
-    .btn {
-        width: 100%;
-        margin: 10px 10px 10px 10px;
+        width: 20vw;
+        padding: 20px;
+        gap: 25px;
     }
 </style>
