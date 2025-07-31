@@ -4,6 +4,7 @@ It is based on ressources like [aidedd](https://www.aidedd.org/) and is supposed
 
 > [!IMPORTANT]
 > This project is for now in a prototype state. Basic visuals have been made using Figma, there is minimal JSON CRUD operations for characters.
+> Link to the [figma project](https://www.figma.com/design/Lg6SMWXGeaqfFrUfOFMHgN/char-manager?node-id=0-1&m=dev&t=pZM2ZPj66zXb07oF-1)
 
 ## Todo list
 - [ ] Finish characters page
