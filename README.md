@@ -9,5 +9,5 @@ It is based on ressources like [aidedd](https://www.aidedd.org/) and is supposed
 - [ ] Finish characters page
 - [ ] Finish the character interface
 - [ ] Implement lock-based data modification on each data cells.
-- [ ] Add spells API support for quickly looking up spells.
+- [ ] Add spells API support for quickly looking up spells. Will be using [this DnD 5e API](https://5e-bits.github.io/docs/tutorials).
 - [ ] Add ThreeJS dice roll animations for dice rolling.
