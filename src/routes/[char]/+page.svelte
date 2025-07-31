@@ -4,6 +4,8 @@
     import Button from "$lib/components/Button.svelte";
     import { type PageProps } from "./$types";
     import Box from "$lib/components/Box.svelte";
+    import LockingBox from "$lib/components/LockingBox.svelte";
+    import { LockableCell } from "$lib/utils.svelte";
 
     let { data }: PageProps = $props();
 </script>
@@ -11,18 +13,29 @@
 <section>
     <div id="lsidebar">
         <Button action={() => goto("/", { replaceState: true })}>
-            <Undo2></Undo2>
-            Back to characters
+            <Undo2></Undo2> Back to characters
         </Button>
-        <Box width="100%" height="auto">dick</Box>
+        <Box width="100%" height="auto">
+            <img alt="yeah nah" />
+            <p></p>
+        </Box>
+        <LockingBox
+            height="auto"
+            width="100%"
+            title="Stats"
+            cell={LockableCell.StatsCell}
+        >
+            Yeah
+        </LockingBox>
     </div>
     <div id="content"></div>
 </section>
 
 <style>
-    :global(body) {
-        padding: 0;
+    :global(*) {
+        box-sizing: border-box;
         margin: 0;
+        padding: 0;
         font-size: 20px;
     }
 

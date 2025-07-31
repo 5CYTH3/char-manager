@@ -16,7 +16,6 @@
         max-width: 200px;
         min-height: max-content;
         padding: 40px 0 40px 0;
-        box-sizing: border-box;
 
         flex-flow: column;
         flex-shrink: 0;
