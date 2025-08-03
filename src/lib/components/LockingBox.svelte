@@ -1,10 +1,13 @@
 <script lang="ts">
     import { Lock, LockOpen } from "@lucide/svelte";
     import { LockableCell, lockingMutex } from "$lib/utils.svelte";
+    import { setContext } from "svelte";
 
     let { title = undefined, children, width, height, cell } = $props(); // Cell is utils/LockableCell to apply mutex-like behaviour to locking and unlocking
 
     let unlocked = $derived(cell === lockingMutex.value);
+
+    setContext("locking-box", () => unlocked); // Needs to be lazily evaluated or error https://svelte.dev/docs/svelte/compiler-warnings#state_referenced_locally
 </script>
 
 <div class="container" style="width: {width}; height: {height};">
@@ -31,7 +34,7 @@
             <div class="divider"></div>
         </div>
     {/if}
-    {@render children()}
+    {@render children({ unlocked })}
 </div>
 
 <style>
